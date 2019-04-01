@@ -242,4 +242,28 @@ my design is fully defined
 
 ### Lecture 30 - Our First Features: Extrude Boss, Cut Extrude, and Fillet
 
+* we will design the 3d cube of '/courseRepo/lec30-Extrude-Cut-And-Fillet.PNG'
+* We will use first the **Extruded Boss** command from Features tab: it pushes outa 2d scetch into the 3rd dimensionadding material
+* **Extruded Cut** cutts the 2d sketch into the 3rd dimension removing material from the outside extruded shape
+* **Fillet** rounds sharp edges
+* To recreate the cude we need to plan our steps:
+	* extrude boss
+	* cut extrude
+	* fillet
+* we create a new part. we select the top plane to sketch
+* we draw a center rect around the origin and add equal relationship to make it square
+* we make the side 5in
+* our sketch is fully defined. we exit and hit Feature tab and click Extrude Boss. according to the draw the height is 5in so we set in props dim 5in and hit OK (our extrude type is Blind so 1dir)
+* we move to Step2. we select a plane. with box created we have 6 planes. each side can be used as a plane. we have still the 3 original planes of the canvas
+* if i select a side of the cube i can edit a sketch of it
+* i click on top side of box and select sketch command. the origin appears but i am in 3d orientation. from orientation menu i select top (or in design tree click on sketch) and click 'Normal To'. ia m now in 2d. i draw another square around origin of size 3in. it is fully defined
+* i exit the sketch and select Features => extruded cut
+* i play with orientation to see it in 3d. i set dim to 5in and hit apply (I can use Through all instead of Blind) to cut all
+* For fillet i choose 'Fillet'. i have to select items to fillet and then fillet params
+* in items fillet i put edges to fillet. i select inner and outer square lines as edges. i rotate and select on the bottom side the edges
+* as all edges are on one surface. if i click on the surface all edges are selected (in list it appears as Face). 
+* according to the template the radius is .25in. we set it in Fillet Params
+
+### Lecture 31 - Let us Edit and Delete Features.
+
 * 
