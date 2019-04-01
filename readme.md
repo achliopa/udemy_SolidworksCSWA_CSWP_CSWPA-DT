@@ -266,4 +266,64 @@ my design is fully defined
 
 ### Lecture 31 - Let us Edit and Delete Features.
 
-* 
+* we will take model from previous lecture and start editing the features 
+* we have 3 active feats so far
+* we click on boss extrude feat and click 'edit feature'
+* we increase distance to 7in
+* we edit fillet feature. we change radius and delete face1 from applied items
+* we can even edit a sketch  wwe used to create a feat
+* selecct a feat => expand => select the used feat => edit sketch
+* changing the sketch makes the feat change as well
+* to delete a feat RCLICK => delete. it deletes dependent feats but not he underlying sketch (by default)
+* if i delete a base feat all the dependencies are deleted
+
+### Lecture 32 - Let us do Chamfers now
+
+* a chanfer is a way to remove sharp edges using an angled slope
+* is like fillet but fillet is rounded. chanfer is straight
+* we delete fillets
+* in command menu in Fillet we click the drp down and select Chanfer
+* we add the 2 faces to list
+* we select chamfer type
+	* in 'angle distance' we spec angle and distance
+	* in 'distance distance' we spec 2 distances from the edge (symmetrical we spec 1)
+	* in 'vertex we select a point (edge)' and define3 distances for a triangle around it
+
+### Lecture 33 - Let us Practice our First Features!
+
+* we will implement th drawing of 'lec33-Practice-Extrude-And-Chamfer-Drawing.PNG'
+* we plan the creation of the drawing
+	* extrude boss
+	* chamfer around
+	* chamfer edge
+	* extrude cut holes
+* select top plane for sketch
+	* create the arc with center on origin
+	* add 3 lines for rectangle
+	* add dimensions. (radius, length of horizontal)
+	* our sketch is fully defined. exit and extrude boss for 0.5in
+* apply chamfer
+	* on top face (except on edge)
+	* distance -distance (.25height,.5 length according to drawing)
+* apply chamfer on distant edge 
+	* (distant distant 3/8in height 1.25 inch length)
+* add 4 holes
+	* select top face
+	* sketch
+	* click on sketch on design tree => normal to
+	* add one circle
+	* center of circle with origin (add horizontal rel)
+	* add distance between circle  center and external a rc (1.25)
+	* add smart dir for diameter (5/8)
+	* circle is fully defined.
+	* circle is repeated 4 times horizontally. 
+	* i add linear sketch pattern X axis , 4, distance 1in
+	* i fix distance and axis (my sketch is fully defined)
+	* exit sketch => feature => extrude cut => through all
+
+### Lecture 34 - Design Priorities_ A point in Design Intent
+
+* we will address apoint in design intent. design priorities
+* we will impleemnt apart in two ways and see how a change in dimensions affects each one
+* 1st implementation:
+	* 
