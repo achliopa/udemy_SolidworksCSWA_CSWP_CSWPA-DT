@@ -201,4 +201,45 @@ my design is fully defined
 
 ### Lecture 24 - More Sketch Commands: Mirror, Offset, Patterns and Trim
 
+* In this lecture we will learn additional comands that will help us sketch faster and easier:
+	* Patterns
+	* Trim
+	* Mirror
+	* Offset
+* we will sketch a  sawtooth like shape which has a lot of repetition and symmetry
+* we select right plane and sketch two angled lines
+* we add a vertical relation between the external point of the angled line and origin
+* between the external point of the vertical line and origin we add a horizontal relation
+* between origin and vertical point i add a dim of .5in from horizontal point to origin 1.5in
+* we set a dim to angle between lines of 45deg
+* our base shape is fully defined.
+* in the template the base set repeats 4 times on each direction.
+* we will use the 'Linear shape  Pattern' command from sketch command menu
+* in the properties (left menu) we click into the box entities to pattern and turns red. we then select the elements to add to the pattern (2 lines)
+* we add the repetition count to add on X-axis (horizontaly) to 3 (instance-count)
+* we then add dimension x spacing to 1.7in (we can also drag the line)
+* we click OK 
+* if i dont click fix the axis direction our other 3 shapes are not fully defined. i can move the pattern up or down (individual patters are connected with pattern rlation)
+* to fully define it manually i add horizontal relation between first point of 1st to 2nd shape. i also add point to vertical line a coincident relation
+* we draw a horizontal line to origin
+* i want to remove 3 small vertical lines. we ll use 'Trim Entities' command from sketch
+* with "PowerTrim" option i select an area to trim. or i can us it as cutting line. whatever touches it gets trimmed
+* our whole sketch is reflected on the other side (vertical mirror) and use 'Mirror Entities' to do it. before we do it we need a mirror line
+* we add a centerline vertical on origin
+* we click 'Mirror Entities' and select the entities to mirror (thy get added in the list in options)
+* we click mirror about and select the celnterline. it mirrors and we click ok
+* the final sketch has the saw linewith an offset difference
+* we select 'Offset Entities' command and set distance to ,3in
+* we then select our sketch. we see an outside equal shape with offset is added. we click OK
+* our sketch is final and fully defined
+
+### Lecture 26 - Teaser to the next Section: GOING 3D
+
+* in next section we move to 3d working in Features tab
+* we can use extrude to add the 3rd dim
+
+## Section 3 - Let's Start Applying Basic Features
+
+### Lecture 30 - Our First Features: Extrude Boss, Cut Extrude, and Fillet
+
 * 
