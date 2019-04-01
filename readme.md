@@ -61,4 +61,24 @@
 
 ### Lecture 15 - Sketching Basic Shapes Part 1 - Rectangles and Lines
 
+* when in sketch mode the command menu has all available shape
+* we select right plane and sketch
+* we click line move to irigin and start adding cascading lines. sanp lines are avaialable and indication on vertical and horizontal. to stop drawwing lines DOUBLECLICK or ESC
+* we close our polyline to origin (only two lines are fully defined)
+* we use the rectangle option to scetch a rectange (there are various types avaialble)
+	* corner rectangle. select one corner and move opposite corner
+	* center rectangele. select centrer point and expand moving top right corner (rest is symmetrical)
+* any complex shape can be broken into simpler shapes
+
+### Lecture 16 -  Sketching Basic Shapes Part 2 - Circles, Arcs and Ellipses
+
+* select top plane and sketch
+* we draw a standard circle (center on origin and expand on radius) ESC to stop
+* we sketch an arc (centerpoint arc). we seletc the center (of imaginary circle.) then the radius of the imaginary circle and then start drawing the arc along the perimeter
+* to delete a sketch (exit sketch => delete)
+* to sketch an elplse we click it in command menu => select center then define the main radius and then the secondary. 
+* where we do the second click is th max radius point
+
+### Lecture 17 - Using Dimensions (Distances) to Define Your Sketch
+
 * 
