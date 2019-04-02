@@ -238,7 +238,7 @@ my design is fully defined
 * in next section we move to 3d working in Features tab
 * we can use extrude to add the 3rd dim
 
-## Section 3 - Let's Start Applying Basic Features
+## Section 4 - Let's Start Applying Basic Features
 
 ### Lecture 30 - Our First Features: Extrude Boss, Cut Extrude, and Fillet
 
@@ -325,5 +325,59 @@ my design is fully defined
 
 * we will address apoint in design intent. design priorities
 * we will impleemnt apart in two ways and see how a change in dimensions affects each one
-* 1st implementation:
-	* 
+* implementation:
+	* create a new part => go to top plane => sketch => corner rectangle from origin => add equal rel to 2 lines (square) => set smart dim to 6in
+	* exit sketch => apply extrude boss 1in
+	* select top face => sketch in design tree => normal to => draw circle ) => smart dim of diameter (1in). there are 2 ways to set circle to center
+* 1st option: set smart dim of 3in betweencircle center and hor line and ver line of rectangle (fully def) => do the througout cut. If i change the square dim the circle (hole) wont be in the center anymore
+* 2nd option: use centerlines to connect square points. in the intersecting point draw the circle (no dimensions  just relations). resizing the square creates no issues
+* Set design priorities . think of the future. design accordingly
+
+## Section 5 - Let's Start Applying more Complex Features
+
+### Lecture 38 - The Features: Revolved Boss and Revolved Cut!
+
+* we will implement 'lec38-Revolve-And-Revolve-Cut-' and 'lec30-Ball' parts
+* Revolve Boss: Adding material by revolving a shape around a revolution axis 
+* Revolve Cut: Removes material by revolving a shape around a revolution axis 
+* a ball is a revolved D shape (half circle arc)
+	* selct front plane
+	* add sketch and draw an arc around circle + line
+	* we can use the line as revolution axis
+	* we exit sketch => go to feat => revolved boss => 360deg => set line as revol axis
+* we can set direction of boss
+* to do the next model: revolve boss => revolve cut => extruded cut
+	* select front plane => draw rectancle => add dimensions => exit sketch => feats => revolve boss => select revolve line => 360deg => ok
+	* select right plane => sketch => normal to => draw a square => dimension it => add a centerline as revolution line in the mid point of top and bottom. attach square to side (collinear line2line rel). => add a centerlin in square middle => set dimension from the top => it is now fully defined => exit sketch => feats => revolve cut => select revolve line on centerline
+	* select front plane => sketch => edit => normal to => draw rect => dimension it > add centerline to face => midpoint coincident to centerline. rect dimension to top face => our sketch is fully defined => exit sketch => feats => extrude cut => through all both (both sides of plane) => ok
+
+### Lec 39 - The Features: Swept Boss and Swept Cut
+
+* we will model 'lec38-Revolve-And-Revolve-Cut'
+* Sweep Boss: Adding Materials by sweeping shape through a designated path.
+* to apply it to the sample model we need to use 2 sketches. one on each plane
+* Sweep Cut: Removing materiasl by sweeping a shape through a designated path
+* Plan for modeling the object: Sweep Boss => seep cut
+* As we said to apply this feat we need 2 sketches on different planes. one reresetns the profile and the other the path (extrusion follows the path)
+* Draw path: front plane => sketch => draw to parallel lines and one tangent arc => add dims and rels make it fully defined
+* Draw profile: on right plane => sketch => draw elipse. dimension it => exit sketch
+* Sweep boss: feats => swept boss. select profile add to profile slot in props .  select path and add it to path list in props => apply feat
+* swept cut: select profile ==> sketch => normal to => add xircle => dienson=> xit sketch => features => swept cut => select circle as profile path as path apply. path is not seen.... => in canvas i have a part tree +. in sept boss select the sketch of the path APPLY
+* to confirm that cut goes all in. i select in canvas Section view and drag it
+
+### Lecture 40 - Reference Geometries: Making new Planes other than Base Planes and faces!
+
+* in this lecture we will learn how to make planes that are
+	* different than the base FRONT, RIGHT and TOP planes
+	* different than other existing faces from features
+* What specifies a plane? (Views of a model to sketch upon) 
+* To specify a plane:
+	* 3 points (vertices)
+	* a line and a point (an edge and a vertex)
+	* 2 lines (edges)
+	* other planes (offset, midplane)
+	* a plane and a line (a face and an edge)
+	* a plane and a point (a face and a vertex)
+	* a plane and a curve (a face and a curve)
+* we will create the model from 'lec40-Refrence-Geometry-Planes-Drawing' and add planes on it
+* 
