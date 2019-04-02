@@ -380,4 +380,74 @@ my design is fully defined
 	* a plane and a point (a face and a vertex)
 	* a plane and a curve (a face and a curve)
 * we will create the model from 'lec40-Refrence-Geometry-Planes-Drawing' and add planes on it
+* right plane => sketch => rectangle from origin => tangent arc on top => change top line of rect to construction line (props => for construction) => add dims => its fully defined 
+* we use offset entitites with a param of 1in and click on shape. we get the offset => ok => exit sketch
+* add boss extrude (5in)
+* we have to make apartial hole on top. we canntot use the top plane of the model because it is curved
+* we need to create a new plane to draw the rect and set cut extrude
+* Features => Refernece Geometry => Plane. on left in props i need to provide up to 3 defining references to specify it. we will use the curve and a face (botom floor of model). our new plane istangent to the side of the model. this happens because the relation to the bottom face is perpendicular . we change it to parallel. 
+* the relation to the curved face is tangent. the plane is now touching the curved face from top and is fully defined
+* we select the new plane => sketch => normal to => draw the rect dimension it
+* we add a cnstruction line to midpoint of big shape and make it coincident to it on both sides. its fully defined => exit sketcvh 
+* apply feat => extruded cut  .8in => ok DONE
+* to hide the plane : design tree => plane1 (our plane) => click => hide
+* we ll define a plane using 3 points : features => ref geometry. select 3 vertexes and get aplane
+* we gdet a line and point plane, a line+line plane
+* i can use any geometry plane to sketch on or apply feats
+* i choose extrude boss 'up to next' to extrude till next face
+* i define a plane from a face using an offset (distance from face). it pallies on straight faces
+* if i pick to opposite faces i get a plane exactly in the middle
+* if i click on line and face i get a perpendicular plane passing from both and itersecting face (or i cen set angle in props)
+* if i choose a point and a face we get a parallel plane to the face concident to the point
+* planes must be fully defined to be sketched
+
+### Lecture 41 - The Features: Lofted Boss and Lofted Cut
+
+* we will model the 'lec41-loft' file
+* Loft Boss: Adding materials by connecting different cross sections (usually sketches in different planes)
+* We can use guide curves with loft to 'Guide' the materials added between the section
+* Loft Cut: Remove materials by connecting different cross sections (usually sketches in different planes)
+* our plan to design the model: loft boss => loft cut
+* the design has 4 different planes used to design the loft
+* we generate these planes: take the right plane and create 3 more planes with offset 5, 5, and 7in
+* we start with right plane => sketch +> add 1 circles and add dimensions
+* we select plane1 => sketch => square => dims 
+* we select plane 2 draw a circle of diam 4in
+* select plane 3 => sketch => polygon se dim and coincident to centerline
+* i am ready to apply loft boss: in props we have 1 list for profiles and 1 list for guides. we select profiles and then our sketches. we delete the loft. as we will use guide curves
+* guide curves must intersect all sketches. select top plain => sketch. i hide the planes
+* we draw a line connecting one side of points. to make them connect => 3d => click on point and CTRL shape (rel pierce) 
+* we mirror the line on the other side ( use a centerline)
+* we go back to lofted bost. select the profiles. select one full guide curve + ok and then the other + ok. our shape is ok
+* we do lofted cut. we will use 2 sketches on 2 diff planes. we use one side face as plane to add the circle. and the other side plane to add the pentagon
+* we do loft cut. we use only the 2 profiles
+
+### Lecture 42 - PRACTICE!! Let's Model Something that uses some of those Complex Features!
+
+* we will implement the complex model 'lec42-Practice-Sweep-Refrence-Planes-Revolve'
+* we plan the creation of the model: 
+	* revolve extrude
+	* reference plane + extrude boss
+	* sweep boss + extruded cut x2 + mirror
+	* reference plane + extruded cut
+	* fillet
+* we start with outer shell: it is a cylinder so revolved boss and cut to our service: select front plane +> sketch (see the crosssection)
+we add the cross section outline and dimension it. we add an offset insid at .5in and click reverso to be on the inside. we conect shapes (offset and initial) => exit sketch => feats => revolve boss => select revol axis => apply
+* we will create a ref plane for the lid => ref geometry => plane => select top face => offset 0.5 => flip offset
+* we use this plane to sketch => circle =>coradial with inner circle => exit => feats => extrude boss => .3 => flip direction (arrow) => hide plane
+* we will use sweep boss feat for guides. we need a profile and path
+* use top face for sketch => add circle dimnsion is make it horiz to center. i use offset for outer circle .1in
+* we now have to make the path (selct the plane) front plane seems ok
+* we click cross section in canvas and ok. we add the lines and dimension them
+* we are ready for sweep boss. we select the profile (profile and path must be sketches). pipe is ready we need to open them. i select bottom pipe face and make a new sketch. i draw in angle view => add a circle and make it coradial with pipe inside +. exit = extrude cut => through all. we do the same for top => extrude cut => up to next
+* i want to mirror all 3 feats composing the pipe (not to draw again)
+* in feat menu => drop down linear pattern => mirror => add feats to the list (use designtree in canvas) =>  (on mirror face or plane we select right plane) => ok => exit cross section. we need a plane for it
+* ref geom => plane => select rouch surface. planme is tangent. second ref parallel to 2 circles or front plane => scetch => add rect size . midpoitn to origign => extrude cut => feats mirror => select extrude cut => mirror on front plane.
+* add fillets: select the edge apply radius
+
+## Section 6 - Let's Explore Material and Mass
+Properties
+
+### Lecture 46 - Selecting Materials for Your Parts
+
 * 
