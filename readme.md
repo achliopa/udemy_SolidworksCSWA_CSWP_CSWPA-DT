@@ -450,4 +450,30 @@ Properties
 
 ### Lecture 46 - Selecting Materials for Your Parts
 
+* we will learn to select materials for the parts we are modeling
+* we create a cube of 5in
+* we will specify a structural material for the cube
+* in design tree there is a point for materials => RCLICK => edit material
+* we get a long list of predefined standard materials. we select AISI 304 steel 
+* we get info on the properties of the material
+* we can select units (IPS) => click apply
+* the appearane of the cube changes to match the material
+* we select wood and appearance changes. also props change
+
+### Lecture 47 - Viewing Mass Properties
+
+* we use the cube we created in last lecture (made of oak)
+* in top meny bar we select Tools => Evaluate => Mass Properties
+* we get info about the model 
+	* density
+	* mass
+	* volume
+	* center of mass etc
+* we change back to steel and check mass properties change.
+* if i change model units to SI and come back to mass props i can recalculate
+
+## Section 7 - Let's Start doing Assemblies
+
+### Lecture 51 - Opening an Assembly File
+
 * 
