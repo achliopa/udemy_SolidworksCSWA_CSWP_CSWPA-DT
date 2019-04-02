@@ -445,8 +445,7 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 * ref geom => plane => select rouch surface. planme is tangent. second ref parallel to 2 circles or front plane => scetch => add rect size . midpoitn to origign => extrude cut => feats mirror => select extrude cut => mirror on front plane.
 * add fillets: select the edge apply radius
 
-## Section 6 - Let's Explore Material and Mass
-Properties
+## Section 6 - Let's Explore Material and Mass Properties
 
 ### Lecture 46 - Selecting Materials for Your Parts
 
@@ -475,5 +474,51 @@ Properties
 ## Section 7 - Let's Start doing Assemblies
 
 ### Lecture 51 - Opening an Assembly File
+
+* we will learn how to open an assembly file
+	* open from nothing
+	* open from a part
+* open from nothing: new => assembly => we get prompted to add files => cancel => on left menu we get alist of parts opened (we can add from fs). we can browse for a part we created earlier. we open it. now in the design tree the root is the assembly and our part is hanging in the tree under the basic planes. in Assembly tab we can 'Insert Components' and add a second part. we can add multiple part files at once
+* open from a part: if we have a part we are working on and want to create an assembly file => top meny bar => new (drop down ) => make assembly from part/assembly => save it => we go to the Begin Assemply prop menu to add parts (our current is there already) => click on canvas => design tree is populated and we view the part. if i close the assembly the part we worked on is open in background
+
+### Lecture 52 - Types of Mates in SOLIDWORKS: Standard, Advanced and Mechanical
+
+* Mates are the relations between parts in assembly. they are very similar to the relations we used in our skethes
+* to use mates we need components. we add a rectangle and a triangle part in our assy
+* in the Assy menu we have Mates command. we get a list of selected entities of parts. the entieis can be edges, faces
+* below are a list of available mates (standard, advanced, mechanical)
+* standard mates are:
+	* coincident
+	* parallel
+	* perpendicular
+	* tangent
+	* concentric
+	* distance
+	* angle
+	* lock
+
+### Lecture 53 - A Point in Adding Parts _ Base Fixed Part
+
+* we will address a point in adding parts (the fixed part) . in this the first part we add to an assembly is a fixed part. 
+* all other parts create relations to this fixed part
+* i create a new empty assembly and browse for parts. i add the triangle
+* i go and add a second part => insert components => (i add the cube)
+* the first part i added is the fixed part. if i click it and drag it with the mouse it doesnt move. if i do the same to the second part it moves
+* the fixed part is indicated in design tree as (f)
+* the fixed part plays the role of the origin in sketch
+
+### Lecture 54 - The Standard Mates: Coincident, Parallel, and Perpendicular
+
+* the mates we will learn are coincident, parallel and perpendicular.
+* they are the same as in sketching but in 3d space
+* we will use 4 parts and will use these three mates to put the parts in their slots in base part
+* we open a new assembly file. we will add all 4 parts from courserepo
+* we start by adding the base part (sloted one) so that it will be fixed
+* we insert the other 3 components
+* to put the rectangular shape in its slot: mate command => mate selections: upper face of rect to the upper face of base => click coincident.=> ok . i can now move the rect but always in the same plane as the base. i add one more mate: i click a vertex on the rect and a vertex on the slot of the base . coincident mate is applied and the rect takes its place. thow its not fixed i can rotate around coincident point, i add one more relationship between edges ( i can add a vertex mate). rect is fully bound so (-) disapears
+* i click on triangle then Assembly => move components (move in space) => move comp (drop down) => rotate component => click on triangle and square and rotate
+* bound the triangle: to face parallel to base top face (cannot fully rotate now remove an axis of freedom). imake face of triangle and inner face of base perpendicular (remove an axis of freedom). i add one more 2 edges coincident. i can move it up and down. i make top faces coincident. and triangle is bound to base
+
+### Lecture 55 - The Standard Mates: Tangent and Concentric
 
 * 
