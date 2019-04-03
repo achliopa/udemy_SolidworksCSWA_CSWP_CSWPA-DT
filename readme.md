@@ -586,4 +586,54 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 ### Lecture 66 - Creating Standard Orthographic Views from a Part
 
-* 
+* we will learn to create orthographic views from a part using the part in 'courseRepo/lec66-Creating-Orthographic-Views'
+* open it => new => drawing from a part => from the view palette on the right i select Front view> click and drag to a position
+	* move mouse up get top view
+	* move mousee down to get bottom view
+	* move mouse right to get right view
+	* move mouse left to get left view
+	* move mouse diagonal to get isometric
+* these are the orthographic views
+* views are apearing in the design tree.
+* if i move a view the others are linked and move as well
+* first view i insert is base view . the others are linked to it
+* isometric view is a standalone view and can move freely
+* adding more views is easy. click on view palette icon on right menu bar
+
+### Lecture 67 - How to Change the Drawing Scale
+
+* we will use the drawing from previous lecture 'lec66-orthographic-views' to show how to scale
+* i click on the base view (front) => scroll the left menu down => in scale we choose custom. i do user defined and set it 1:1.5
+* i can select the isomentric view and scale it to 1:1
+
+### Lecture 68 - Communicate your Drawings: Dimensions, Holes, Centerlines and Display Style
+
+* we use the previous lecture drawing 'lec67-drawing-scale' as base
+* to add dimensions from command menu tab => Sketch => Smart dimension
+* adding dimensions is like sketching. dont overdue it, add as mush as necessary to communicate the design and intent to manufacturers , reviewers or users
+* to communicate holes: Annotation => Hole Callout => click on hole and get annotation of radius and depth
+* adding center mars also help with the understanding (show symmnetry)
+* i can extend circle centermarcs or i choose Annotation => centerline=> click on two symmetric parallel lines and get centerline in middle
+* i can change display style of views (CLICK => left menu => display style)
+* i can show hidden lines
+* usually isometric is shown realisticly
+
+### Lecture 69 - That Information Block at the Bottom of the Drawing!
+
+* we build on top of the last lecture drawing
+* we zoomin the info table => RCLICK => Edit Sheet format
+* we can highlight and edit info
+* to finish editing RCLICK => Edit Sheet
+
+### Lecture 70 - Exporting a Drawing as a PDF or an Image
+
+* on top menu bar => save as => file format e.g pdf => save
+* many file formats are avaialble
+
+## Section 9 - Additional Stuff
+
+### Lecture 73 -  Before taking SOLIDWORKS Certification Test _ Sample Test
+
+* Before taking the SOLIDWORKS certification test. Check out SOLIDWORKS [page for the certification](https://www.solidworks.com/sw/support/796_ENU_HTML.htm).
+
+### Lecture 74 - Taking SOLIDWORKS Certification Test
