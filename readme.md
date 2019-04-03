@@ -521,4 +521,69 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 ### Lecture 55 - The Standard Mates: Tangent and Concentric
 
+* We will learn how to use the standard mates: tangent and concentric
+* we use the parts in 'lec55-Standard-Mates-Tangent-Concentric' folder
+* we create a new assembly and add first the base (fixed) and import the component 3 times
+* i can make copies of items click + hlod CTRL + move and drop
+* i wan to put a cylinder in the hole: click Mate: => click outer surface of cylinder + click inner surface of hole + select concentric. now it can only move up down and rotate. irestric up and down with coincident. to restrict rotation. if i want inner cylinder gap parallel to block edge: 2 edges + parallel mate or surface. cylinder is restrained
+* for 2nd cylinder i do concentric with edges. applycoincident and perpendicular
+* for 3rd i do tangent of surfaces
+
+### Lecture 56 - Finding out Existing Mates, Deleting or Modifying them!
+
+* we use the assembly from lec54
+* there are 2 ways to identify mates: 
+	* from the design tree
+	* from the canvas
+* in the design tree i can
+	* see all mates of the assembly in its tree
+	* see all mates restraining a part in its subtree
+* if i hover on the mate i can see the involved entities
+* i can RCLICK + DELETE to delete one
+* on canvas if i select a part and RCLICK i get the option View Mates which shows a pop up with the applied mates
+* i can RCLICK+ DELETE them or edit them etc or even temporarily Supress it
+
+### Lecture 57 - The Standard Mates: Distance and Angle
+
+* we create a new assembly and import base part from folder 'lec57-Standard-Mates-Distance-Angle' as fixed and insert wing part which we cp 3 times (4 in total)
+* all my wings touch the base top face. i add the firce on edge with a coincident mate rel between wing edge and base edge. and then touching edges on both coincident (like a hinge). the i select 2 angled edges (or faces) and apply angle mate rel of 130deg. do the same for other side
+* for the middle wing i apply 2 coincident mate to place it on top of base (sliding horizontaly) and i distance from side wing
+
+### Lecture 58 - The Standard Mate: LOCK
+
+* LOCK is one of the least used mates in solidworks
+* we create a new assembly and import base part from folder 'lec57-Standard-Mates-Distance-Angle' as fixed and insert wing part and cp it 1 time
+* i select mate => an element from both wings (verterx, edgw, face) and use LOCK rel. it locks both parts to each other on their curent position (one to other) so they behave as 1 part in olacement 
+
+### Lecture 59 - Reference Geometries: Coordinate System
+
+* we will add a new coordinate system ro a part and find the center of mass according to this new coordinate system
+* we get a drawing 'Reference Geometries: Coordinate System' and a part and try to find the center of mass to the coordinate system shown in the drawing
+* we open part 'lec59-Lab_ring_2015' and see the mass properties tools => eval => mass properties
+* we see the center of mass location and the origin . we want to add a coordinate system to be used for mass center calculation
+* Features tab => ref geometry =>we place the coord systm to our vrtex. 
+* we need to orientate it. we select edges for the axes (we need to define them in order x->y -> z)
+* in mass properties in report coordinate reference to i select the new coordinate system
+
+### Lecture 60 - PRACTICE!! Let's Assemble something using Standard Mates
+
+* we will assemble an assembly of 6 parts using mates. the parts are in courseRepo
+* we add all parts (base first).
+* we attach the ball to the handle (concentric)
+
+## Section 8 - Let's Start doing 2D Drawings
+
+### Lecture 64 - Opening a Drawing File
+
+* there are 2 ways to open a drawing
+	* open from nothing: new => drawing => select size => new drawing open. we can import parts or assembly, we click on drawing and views are added
+	* open from part or assembly:  when working on a part => new (drop down) => make drawing from part/assy => on the right we see different views of our part
+
+### Lecture 65 -  Adjusting Measurement Units' System in a Drawing File
+
+* be sure to always work with the correct unit of measurement (bottom right corner)
+* the unit of measurement in our drawings file, does not have to be the same unitwith what was used to create the part
+
+### Lecture 66 - Creating Standard Orthographic Views from a Part
+
 * 
