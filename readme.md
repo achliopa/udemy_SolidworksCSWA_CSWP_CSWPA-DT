@@ -647,4 +647,35 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 ### Lecture 7 - Draft
 
+* Draft Feature enables us to create tilted surfaces
+* we will implement 'lec7-Draft-Lecture-Demo'
+* design the base block: we start a new part => top plane => sketch => draw square (center at oigin) => dimension => exit sketch => feats => extrude boss
+* we will add the conical shape on top: select top face => sketch => normal to => to easily draw a rect same as the top face we use Convert Entities command selecting the face in sketch mode => exit sketch => select sketch from tree=>feature=> extruded boss. we dont wont a cube but a conical shape. so in extruded boss menu we select Draft On and set the angle accoding to drawing (we can draft utward for bell style shape) => ok
+* we repeat the same for bottom face but we draft outward
+* we will now implement the draft style cut in the bottom of the bell => bottom face => draw square (origin center) => dimension from face edge. => exit sketch => extrude cut => draft 
+* draft exists as a standalone feat in menu. we get draft angle
+* in draft feat we set neutral plane (it is what gets unchanged in draft) for us is the inner square. we also select faces to draft (4)
+* select a side face => sketch => draw square center to face => dimension  => exit => extrude boss
+* use standalone draft for tilt on top select outer face (neutral plane select face to draft apply angle)
+
+### Lecture 8 - Shell
+
+* Shell enables us to easily empty parts from the inside
+* we will implement the drawing in 'lec8-Shell-Lecture-Demo-Drawing'
+* set to IPS => new => part => top plane => sketch => cetered circle. dimension => exit => extrude
+* top face => sketch => convert entity => draw line (string) => dimension => make vertical => exit sketch => extrude cut (select conture)
+* in feats => shell feat
+* sheal feat has the following params:
+	* dimension (thickness) of the shell
+	* faces to remove (whatever i put here is removed)
+	* Multi thickness (dimension)
+	* Multi-thickness faces
+* if i set thickness of shell and apply my whole body becomes a shell of that thickness
+* if i slect top base as face to remove in the shell feat it is removed from shelled object
+* in my drawing thickness of shell is different for side wall and bottom
+* this is done with multithickness. select a face and set its particular thickness
+* for bootom i want .5in thickness. i add bottom face to multithickness list and set its thickness
+
+### Lecture 9 - Hole Wizard
+
 * 
