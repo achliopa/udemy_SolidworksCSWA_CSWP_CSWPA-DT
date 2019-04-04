@@ -1,7 +1,12 @@
-# Udemy Course: SOLIDWORKS: Become a Certified Associate Today (CSWA)
+# Udemy Course #1: SOLIDWORKS: Become a Certified Associate Today (CSWA)
+# Udemy Course #2: SOLIDWORKS: Become a Certified Professional Today (CSWP)
+# Udemy Course #3: SOLIDWORKS: Become a Certified Drawing Specialist Today
 
-* [Course Link](https://www.udemy.com/solidwokrs-go-from-nothing-to-certified-associate-level/)
-* [Course Repo]()
+* [Course #1 Link](https://www.udemy.com/solidwokrs-go-from-nothing-to-certified-associate-level/)
+* [Course #2 Link](https://www.udemy.com/solidworks_pro/)
+* [Course #3 Link](https://www.udemy.com/solidworks_drawing/)
+
+# Course #1: SOLIDWORKS CSWA
 
 ## Section 1 - Starters and Course Overview
 
@@ -636,4 +641,10 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 * Before taking the SOLIDWORKS certification test. Check out SOLIDWORKS [page for the certification](https://www.solidworks.com/sw/support/796_ENU_HTML.htm).
 
-### Lecture 74 - Taking SOLIDWORKS Certification Test
+# Course #2: SOLIDWORKS CSWP
+
+## Section 2 - Features Bundle # 1
+
+### Lecture 7 - Draft
+
+* 
