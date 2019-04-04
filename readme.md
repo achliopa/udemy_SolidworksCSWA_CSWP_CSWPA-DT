@@ -678,4 +678,40 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 ### Lecture 9 - Hole Wizard
 
+* Hole wizard enables us to make a variety of slots and holes, threaded or not, that match well establshed industry standards
+* we will implement the drawing of 'lec9-Hole-Wizard-Lecture-Demo-Drawing'
+* we will create a cubical shell and use hole wizard to add holes in it
+* top plane => sketch =>centered rect => dimension => exit sketch => feat => extrude boss
+* Features menu => Hole Wizard 
+* Hole Wizard offers standardized holes. we follow the drawing: 
+	* Holetype: Counterbore
+	* Standard: ANSI inch
+	* TYpe: binding head screw
+	* Size 10
+	* Fit = Loose
+	* End Condition : through all
+* after seeting the config. we need to poistion the hole in the drawing => Positions Tab => Select face. face becomes a scetch plane we adjust the view clicking on the coordinate system in the canvas bottom left corner => we drop the hole. hole placement in whole wizard is done with points. whenwever we bind the point with rules and dimensions there will be the center of the hole. we add centerlines and mirror the hole point in both directions
+* we drill hole b following the same procedure (just we use the custom param for countersink)
+* we use hole wizard for type C thread is blind and 3in
+* In positions tab we click 3d sketch as we want to place th thread in 2 faces. we center them with cenbterline
+* if we go top view we see doted lines. these represent threads
+
+### Lecture 10 - Reference Geometries: Coordinate System
+
+* Lecture is same as Lecture 59 of CSWA course
+
+### Lecture 11 - Linking Dimensions
+
+* By linking dimensions. one dimension can be dependent on another one
+* we will work on that implementing a triangle like 'lec11-Linked-Dimentions-Lecture-Demo-Drawing' 
+* new part => front plane => sketch => draw a triangle with one vertex on origin and one 90o angle. 
+* we dimension just 1 edge
+* instead of using equality as a edge relation in sketch: we dimension the other edge of triangle. instead of giving a number val i write '='and click the other dimension. the value of the dim is ='D1@Sketch1' . i click ok. now the dim value on sketch is 'Σ 3.00' to show it is a linked dim
+* now when i ressize the first edge. the other gets resized.
+* the rational of using it is that we can us it for other sketches or features
+* without exiting the sketch we go to feature => extrude and in dimension we enter = and click on the first dimension
+* now if i chang eoriginal dim all the other change
+
+### Lecture 12 - Let's Practice Together (Draft, Shell, Hole Wizard, Linked Dimensions)
+
 * 
