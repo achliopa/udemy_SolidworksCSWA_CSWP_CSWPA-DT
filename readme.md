@@ -722,3 +722,100 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 	* find new weight
 * plan of implementation: rect => extrude boss => draft => hole wiz => shell => extrude cut
 * to make holes symmetric and equally spaced i do linnear pattern. then select scenter of first, center of last and centerline and use symmetric rel
+
+## Section 3 - Features Bundle #2
+
+### Lecture 16 - Equations
+
+* Equations are a more sophisticated way to link dimension
+* we will be able to define variables and equations and link them to specific dimensions
+* we will implement the 'lec16-Equations_Drawing'
+* we set to mm in a new part
+* we will go on to define variables
+* The first way to define variables: Design Tree => Part root => RCLICK => Hidden Tree Items => Equations => Manage Equations
+* We get a window with a list of Equations Global Variablers and Dimensions
+* we define a global variable and click OK
+	* Name: "A"
+	* Value: =5
+* equations are added to the design tree. in there is A as a global
+* in top plane i sketch a triangle made of lines
+* i dimension base edge. instead of entering a num i write = and get a list of options (Global Vars, Function, File PRoperties). In global variables is A and click ok..
+* My second Global Var i define in a different way. I dimension another edge. in the dim i write ="B" . the global sign is appearing. i click on it and i am propted to enter a val i write 4 and ok. A global var of "B"=4 is created and edge is dimensioned.
+* i dimension 3rd edge and i write ='A'/2 which is valid
+* i define another global in manage equations (RCLICK on Equations in design tree):
+	* Name: "C"
+	* Value: "A"-"B"
+* i set and use globals using ""
+* i extrude boss using C for thickness
+* now changing the vars i mod all my design
+
+### Lecture 17 - Mirror
+
+* Using mirror enables us to easily create symmetrical copies around a line, a plane or a surface
+* we will vreate a mirrored model 'lec17-Mirror_1_Drawing' following the plan: Hex => extrude => extrude cut circles => mirror => add hex extruded on top => mirror extruded hex
+* new part => inches => top plane => Sketch => polygon => base horixzontal => side dim 3 => extrude
+* create side holes: top face => sketch => diemension. => mirror hole on centerline (mirro entities) => extrude cut
+* i will now miror the whole shape: Feature => Mirror
+* i need to add entities to the following lists
+	* mirror face/plane: like centerline in sketch 
+	* features to mirror: (select features to mirror)
+	* faces to mirror: if we want to mirror just faces
+* apply
+* draw the face on top face => extrude => mirror. to mirror it i need to add a plane (using 2 edges of the shape)
+
+### Lecture 18 - Features End Conditions
+
+* End Conditions can provide us more control utilizing features like extruded boss and extruded cut
+* we will implement the 'lec18-Feature Conditions_Drawing' in mm
+* new part => front plane => sketch 2 lines and an arc => dimension 
+* the angle of the arg is 75o. i add 2 centerlines add rel on angle and concinet the arc point 
+* extrude boss (thickness to 8)
+* we ll create central plate => select side face => sketch => cross section =>sketch => normal to => add rect => size and position
+* extrude boss:
+	* Up to Body => select curved feature (useful for multibody parts)
+	* up to next face
+	* up to surdace (select surface)
+	* blind extrude type gos up to dimension
+	* through all to the opposite face of the design
+	* up to next to the next model face
+	* up to vertex. to the next vertex i select
+	offset to surface. like up to surface but i set an offset to the end of extrusion (it follwos the surface)
+	* mid plane like blind but extrudes in 2 directions
+
+### Lecture 19 - Multi-Body Parts
+
+* with multi-body part we mean a part with more than one separate body. unconnected volumes
+* a multi-body part is NOT an assembly
+* we will implement th 'lec19-Multi-Body Parts_Drawing' in inches
+* our plan is to create the 4 legs first and then the top body
+* top plane => sketch a square => dimension it
+* place it correcly i create centerlines and add dim from edge to over the centerlins. this addd the dim with centerline at midpoint.
+* i mirror on both centerlines and extrude all squares
+* this is a multibody part
+* in design i have a solid bodies entry with 4 bodies
+* we use mirror feat. but we dont have features to mirror . we have bodies so we click bodies to mirror selecting our bodies
+* i select a leg top face => sketch => normal to => create a rect 
+* i extrude boss it. in the mprps i see merge result. this appears every time o work with multy body part and my new feat will connect them.
+* it asks if we want to integrate them all in one body
+* now i have one solid body
+* if i leave it unchecked i have 5 bodies
+* in a multi-body design i can hide or isolate bodies
+* if i want to send to manufacturers each bodysepearately for construction i have to save each separately (solied bodies => RCLICK => save bodies)
+* Multi-body parts is a powerful design tool to design static objects because i can link dimensions between them but they do nt replace assemblies (its like a locked mate assembly)
+* any dynamic interaction of parts can be done and analyzed with assemblies
+* if i update my multi body part. separately saved bodies do not update. to make the updates apply i have to place the feats above the save bodies entry in list
+
+### Lecture 20 - Feature Scope
+
+* Feature scope works with multi body parts. it allows us to specify which body a specific feature will apply to
+* we will implement the dsign 'lec20-Feature Scope_Drawing' in mm
+* new part => top plane => draw a rect cp it 2 times with offset allong x (linear pattern) extrude. i have 2 solid bodies
+* select an external fase and scetc a rect
+* i want to apply extruded cut and only cut through the 1st and 3rd body
+* select through all
+* in bottom of props we have Feature Scope section. i can eithter select all bodies or select bodies => deselect auto select => select the bodies => apply
+* i get a prompt which bodies to keep in m,y dsign. this promp happens when by applying a feat i split a body into two. i choose to select the m all and now i have 5 bodies
+
+### Lecture 21 - Rib
+
+* 
