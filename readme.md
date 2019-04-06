@@ -714,4 +714,11 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 ### Lecture 12 - Let's Practice Together (Draft, Shell, Hole Wizard, Linked Dimensions)
 
-* 
+* in this exercise
+	* draw the model
+	* select material
+	* find weight 
+	* change width
+	* find new weight
+* plan of implementation: rect => extrude boss => draft => hole wiz => shell => extrude cut
+* to make holes symmetric and equally spaced i do linnear pattern. then select scenter of first, center of last and centerline and use symmetric rel
