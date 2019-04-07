@@ -818,4 +818,90 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 
 ### Lecture 21 - Rib
 
+* Rib is a special type of extruded feature. It is  also a very easy way to create ribs.
+* To show rib feat we will implement the drawing 'lec21-Rib_Drawing' in inches
+* our design plan will be: square => extrude => shell => rib => mirror => rib
+* top plane => sketch => center rect => square => dim => exit => extrude => shell (remove top face)
+* we ll now do the rib: select front plane => sketch => section view => drow one line to define the rib (an incline line defining like a triabngle with side and bottom face) => feats => Rib (without exiting sketch)
+* line is highlighted
+* if i apply it a rib of default thickness is added concident witht he line i drawn (line was extended to meet faces)
+* Rib does not need a closed shape
+* i define my line according to drawing => select Rib
+* the options are:
+	* how to calculate thickenss regarding the line
+	* thickness
+	* extrusion direction dict5ates towards which direction the rib will be extruded. horizontal or vertical
+	* we can add draft (not linear but drafted sideway)
+* i need to mirror rib ON RIGHT PLANE
+* to draw the last rib we will use a reference geometry plane (offset from top plane) and draw the line + curve. we select Rib thickness and change direction.
+
+### Lecture 22 - Let's Practice Together
+
+* we will implement the 'lec22-Ex2_Demo_Drawing' in mm
+* we willpractice the feats we learned
+* desing plan: outer shell (extrude) => rib => hole => mirror => rib => mirror => extrude (multipart) => extrude (mulipart)
+* right plane => sketch => create outline starting from origin => extrude boss (use midplane to keep design symmetrical to origin)
+* use bottom fae as plane => sketch => straing slot feat => dimension it => extrude boss
+* we add global vars
+* we use inclined back surface for sketch plane => draw the wing => extrude boss => draw the circle => extruded cut (offset from surface) => select side face => draw the rib line => rib
+* mirror symmetric feats
+* we create 2 rods (separate bodies): use back inclined face as sketch plane => use both holes and 'convert entities' to create circles => extrude boss => up to surface => unclick merge resutl => we have 3 solid bodies
+* do the hole: select top face => sketch circle => center => dimension => extrude cut (offset from surface)
+* do the plug: slect top surface => sketch => plug is 0.5 mm in the hole so offset feature => exit sketch => extrude boss (up to next, dont merge result)
+* again in top face => sketch => draw circle for plug top => draw circle extrude boss.
+our extrusion is in contact with 2 bodies (plug and base) we want to merge it only with plug
+* i use feature scope. select the plug and leave merge result checkecked
+* we need to create a slot in the middle of the 2 rods: select right plane => add aline ffrom rod midpoint parallel to edges and size it. extrude cut (thin feat 1mm) 2 diresctions through all (feature scope selected bodies select 2 rods)
+* edit material find mass
+* change globasl and recheck mass
+
+## Section 4 - Design Tables and Configuration
+
+### Lecture 26 - Establishing a Design Table
+
+* desgin tables is an efficient way to create multiple configurations of the same model utilizing MS Excel
+* we will implement 'lec26-Establish-a-design-tables' in mm and then get multiple configurations based on a design table
+* new part => top plane => sketch => centered rect and a triangle on top => dimension it
+* by default our dimensions are named sthing like 'D1@Sketch1'. we will rename them to something easier to remenber for our design table
+* extrude boss and select both regions to make 1 unique body
+* i click on feat to see dims. i rename thickness as 'Thickness' in params
+* top face => sketch => normal to => draw centered square => dimension it and name dim 'Key' => extrude cut  (through all)
+* we have the model ready so now we will create the design table: in top menu bar Insert => Tables => Design Table => Autocreate
+* we select only the dims we named from the popup list and we get an excel spreadsheet. default vals are in already
+* in the spreadsheet we add 4 lines with 4 configs with different dimensions
+* after filling the rows we click on canvas and the configurations are added to design table
+* in design tree window we go to tab 'Configuration manager' and 1i see my 4 configurations. doubleclicking on my configs changes the model by changing the dims
+* with this we abvoid creating multiple model files
+
+### Lecture 27 - Modifying Established Design Tables
+
+* we build up onour previous model and design table.
+* we are asked to do the following mods
+	* modify configuration 3, by making H1=20mm and Thickness=30mm
+	* add a new config (h1=5,thickenss=5,key=2mm)
+	* remove key slot from config 2 and 4
+* in the configuration manager in design tree we click on Tables and see Design Table => RCLICK => EditTable. we get the excel sheet popup => ok.
+* in the excel sheet we implement changes
+* to remove key slot i need to be able to apply or not the feat based on the design table. to do this: select the next emtpy table column label cell => DUBLECLICK on the feat in the design tree. the default val is UNSUPPRESSED or U (applied) to disable it i need to set SUPPRESSED or S in config 2 and 4. leaving cell empty is equal to unsuppressed
+
+### Lecture 28 - Configurations
+
+* we will explore configurations without using design tables
+* we will implement 'lec28-Configurations-Drawings' in inches
+* new part => top plane => sketch => center rect => dimension => exit => extrude
+* top face => sketch => normal tro => circle => dimension => exit => extrude cut => through all
+* we will now add anew configuration to our model: design tree menu => configurationmanager => right click on part configurations => add configuration => name: A => ok . our new config appears in the tree
+* beign in the config A i add the hole on the left
+* top face => sketch => add circle => dim => extrude cut
+* if i go back to the default config hole dissapears
+* I Add one more config to ad done more hole
+* every feature i add to a configration of a model is added to the rest but is disabled (supperessed)
+* for C i use A as a base (more similar), i select it in feature manager and add a configuration
+* to draw the rect i dgo to design tree => select cut extrude => suppress it
+* select top face => sketch add rect => extrude cut
+* in configurations we only set feats on and off (no dimension resize (we need desing tables))
+
+### Lecture 29 - Let's Practice Design Tables and Configurations Together
+
+* we will implement 'lec29-Ex 3_ Demo_Drawing' in inches using a made model and playing with configurations and design tables to create multiple versions of it in the same model
 * 
