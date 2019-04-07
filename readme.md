@@ -904,4 +904,15 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 ### Lecture 29 - Let's Practice Design Tables and Configurations Together
 
 * we will implement 'lec29-Ex 3_ Demo_Drawing' in inches using a made model and playing with configurations and design tables to create multiple versions of it in the same model
+* from default we will create config A b and C . then C.2 changing the middle
+* open model. create config with design table
+* we select dimensions: body width, cut width, hole_diameter
+* we select C. in the config mangnager we add config C2. in there we suppress extrud cut hole and add the square
+* we select B and add config B-AISI 304. in it we select the material and edit adding the AISI304
+* in configure material we see the material for each configuration
+
+## Section 5 - Assemblies Advanced Mates
+
+### Lecture 33 - Profile Center
+
 * 
