@@ -915,4 +915,61 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ### Lecture 33 - Profile Center
 
+* Profile center mate makes it very easy and fast to center two simple profiles in relation to each other
+* we work with parts from '/courseRepo/lec33-Profile-Center'
+* we create a new assembly and add MainBody part first as fixed
+* we import the other 2 parts (cap and triangular sticker)
+* we hide the sticker
+* we will put the cap on top of the body using simple mates: select cap bottom face and body top face (coincident)
+* we  need to center it: concentric mate => select edge on cap and body
+* we can still rotate the cap
+* to cp the cap to the botom i Ctrl + click and drag the part
+* i will use the profile mate on the bottom cap to position it: mates => advanced mates => profile mate => select 2 surfaces to center to each other (bottom of cap and bottom of body). => i use Mate alignemtn to flip the cap
+* so Profile Center = Coincident + Coccenric Mates
+* Profile center offers options like:
+	* offset
+	* flip direction
+	* lock rotation
+* we unhide the sticker and use the profile center to stick it to a body face: mate => advanced mate => profile center => select face in triangle and body
+* when we have a part that is not circle we get another option (Orientation) to rotate the part in symmetric positions
+* we can only use profile center with:
+	* full circular faces or edges
+	* linear edges
+	* regular polygons
+* so i cannot use it between triangle and an irregular shape (top of cap)
+* if i have a regular shape with a cut in it ican use it
+
+### Lecture 34 - Symmetric and Width
+
+* Symmetric Mate makes two similar entities symmetric about a plane
+* A width mate constrains a tab between two planar faces
+* we insert base component from 'lec34-Symmetry-Width' as fixed
+* we import the other 2 parts
+* i cp the antenna part
+* i add concentric mate between antenna circular face and hole
+* antena moves in 2 axis of freedom. i want to restain it to be in the slot.
+* we use advanced mate Width to place it in the slot in symmetric distance from side faces: Mate => advanced Mates => width => In width selection we select the faces defining the wiidth => with tab selection we select a face form the part wewant to constraint (antenna). we select faces from both sides. 
+* there are 4 available constraints for Width:
+	* centered (place in middle)
+	* Free (free to move between width faces)
+	* Dimension (precise se of distance tab-widht face)
+	* Percent (use % for position)
+* width faces define a hard limit
+* we do the same for the other antenns
+* we will now implement a symmetric relationship between the antennas: Mate => Advanced Mates => Symmetric:
+* we want a symmetric plant in the middel of base. i can use a plane of a part (base). => entities to mate: select two symmetric faces on both antennas => apply
+* no if i move an antenna the other does symmetric move
+* we want mate to fit in the slot . so we will use width on both axis.
+
+### Lecture 35 - Distance and Angle Ranges
+
+* Distance and angle ranges allow us to set movement ranges for both angular and linear movements
+* we will use assembly 'lec35-distance-angle-ranges' to apply these mates
+* i want to limit the movement of the screen to 0-130o
+* also we want to limit the movement of the keys from 2 to 100mm
+* Mates => Adv Mates => select the faces  (entities to mate) => set angle constraint (maximum value, minimum value)
+* the same is for distance
+
+### Lecture 36 - Path Mate and Linear/Linear Coupler
+
 * 
