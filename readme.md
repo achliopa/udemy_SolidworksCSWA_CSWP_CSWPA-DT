@@ -721,7 +721,7 @@ we add the cross section outline and dimension it. we add an offset insid at .5i
 	* change width
 	* find new weight
 * plan of implementation: rect => extrude boss => draft => hole wiz => shell => extrude cut
-* to make holes symmetric and equally spaced i do linnear pattern. then select scenter of first, center of last and centerline and use symmetric rel
+* to make holes symmetric and equally spaced i do linnear pattern. then select center of first, center of last and centerline and use symmetric rel
 
 ## Section 3 - Features Bundle #2
 
@@ -1066,6 +1066,45 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 * in the selected components we put all the asembly. we calculate and see that the cap does not fit well
 * i can config collision detection
 
-### Lecture 44 - Replacing Parts in Assembly
+### Lecture 44 - Replacing Parts in an Assembly
 
-* 
+* we will use the assembly from lecture 36 as base and use 2 replacement parts
+* first we will replace the ring. we check its movement and its mates => RCLICK => View Mates. it has a path mate between path and the ring
+* to replace apart in solidworks: RCLICK => Replace Component
+* We get some properties like:
+	* which part to replace (prepopulated)
+	* pick a replacement part section
+	* we are asked to atach existing mates
+* we get prompted to config tthe mate
+* solidworks will try to copy the mates from the original part to the replacement
+
+### Lecture 45 - Sub-Assemblies
+
+* we use as base the 'lec60-practice-assembly' from CSWA for upper assembly
+* Sub-assemblies are basically assemblies within other assemblies
+* we open upper and lower assemblies from the courseRepo
+* we will insert lower assembly into upper assembly as sub-assembly: Inser COmponents  => we see the lower assembly in the list => Import
+* assembly is added in design tree
+* we deal with subassemblies like with parts
+* we add width mate and concentric to bind them and parallel
+* in upper assembly i can move the lever but in lower i canno tmove the  drawer although it has mates
+* when we first import sub-assemblies solidworks ttreats them as rigid assemblies that we cannot move parts
+* to fix this: RCLICK on subassembly => click on top menu icon (Make Assembly Flexible)
+* we insert thelong post to connec them. we add mates (Concentric of side face to lever edge) => add width rel with drawer
+
+## Section 7 - Additional Stuff
+
+### Lecture 48 - Official CSWP Sample test
+* Before taking the SOLIDWORKS certification test. Check out [SOLIDWORKS page for the CSWP certification](https://www.solidworks.com/sw/support/797_ENU_HTML.htm). There, you can read more about structure of the CSWP test
+
+### Lecture 49 - Tips when taking the CSWP Exam
+
+* In the case you are planning to take the Professional Certification Test (CSWP), here are few tips: 
+	* Make sure to save the your work separately at the end of each question. 
+	* Having two screen or a bigger screen would be helpful so you can see the question and work on SOLIDWORKS for answers at the same time. 
+	* In multiple choice questions, usually if your answer is off the given ones, it means you did something wrong along the way. This makes the first tip important too. 
+* The CSWP exam is not easy. It does require complex modeling and high level of SW modeling fluency. It will also require you to work fast. Even though this course teaches just about all the skills needed for the exam, speed and fluency are two aspects beyond skills that take time to acquire. 
+* So, take some time to digest what you learned in this course, find lots of objects around and model for practice, or look for side freelancing projects on the side, more practice will greatly increase your chance to Pass the test. 
+
+# Course #3: SOLIDWORKS CSWPA-DT
+
