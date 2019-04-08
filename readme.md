@@ -1108,3 +1108,47 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 # Course #3: SOLIDWORKS CSWPA-DT
 
+## Section 3 - Step2: Drawing Foundation
+
+### Lecture 19 - Relative to Model Views
+
+* Relative to Model Views allowus to define our own orthographic views that are different than the ones set by default
+* we go the 'lec19-Green Block' part to add drawing. we were said that the hex hole face is the front view
+* We open adrawing file: Filw => New => Drawing file => A ANSI size => OK
+* on right menu select View Pallete. inthe drop down select the model
+* Views are populated. and they are strange (tilted, not conveying useful info)
+* we will use the relative to model view functionality to define our own front view
+* in View Layout tab we have all options (Relative view is not included by default)
+* we can use the search bar in top mnu bar to find it: SearchBar => drop down => Commands => Relative View (write it) and drag it to View Layout Menu
+* another way is to go Top Menu bar => Insert => Drawing View => Relative to Model
+* it asks us to select the model we want to work on. => we select the front view we added in our drawing => we get prompted to the part model view with the relative view menu bar on the left
+* i want to set the front view.: First Orientation (Front View) => add my face of choice as front view
+* for second view i choose bottom and select bottom face.
+* we apply it and get taken back to drawing with our new front view ready to attach.
+* after i attach the view to the drawing i ClICK and get Projected View option. i click it and get orthographic views relative to the new front view that i can use by dragging it.
+* i delete origina views.
+* in this way i can make useful designs from models with odd plane selection
+* i use relative view to draw another useful view (inclined holed face)seting it as front and inserting it to drawing
+
+### Lecture 20 - Auxilliary Views
+
+* An auxiliary view is very similar to a projected view, but is folded to an edge of our choosing
+* we use the part and the drawing from previous lecture as base
+* there are 2 ways to create an auxiliary view:
+	* From an existing edge
+	* From a line that we sketch ourselves
+* for our green block i want to show the true sizes and positions of the holes
+* we will use an auxiliary view folded around the side face with the holes
+* View Layout => Auxiliary View. it prompts us to select an edge
+* we select an edge from an existing view in the design sheet and a view is added in the design. this view is the view if we unfold themodel at the selected edge
+* this move moves only perpendicular to the selected edge. 
+* the original view is tagged and an arrow is added to the auxiliary pointing to the  edge
+* we will add another auxiliary view using the top vire edge. we will use the second method
+* say i want an auxiliarry across an edgev pointing to the topview at an angle of 30o
+* Being in the drawing we go to Sketch and add add a line
+* our line must be inside the view focus area of the  view
+* we dimension it to 30o => View layout => auxiliary view => select our newly created line in the drawing => we get a new view
+
+### Lecture 21 - Model Items (for Parts)
+
+* 
