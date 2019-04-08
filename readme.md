@@ -1019,6 +1019,53 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ## Section 6 - Assemblies Deep-Dive
 
-### Lecture 40 - In-Context Features and External References
+### Lecture 41 - In-Context Features and External References
+
+* In-Context features and External References will allow us to link dimensions of different parts in an assembly file
+* create a new assembly => import base (fixed)
+* import the middle block. note it is not dimensioned according to the spec
+* we use profile center to put it on the block
+* we want the edges of base and middleblock to be 0.25in
+* We RCLICK on middleblock => Edit Part => expand design tree => extruded boss => Sketch => edit sketch
+* my sketch rect is not defined. we define it now. we can select dimension to the other parts edge.. we use it to spec .25in from base edge
+* our feats get the -> indications to show they are dependent on other parts
+* i select middle plane top face => sketch => section cut  select extrude cut of base part => convert entities to get the rect =>extrude cut (through all)
+* extrude cut feat is also linked to the other part. these are called in-context features the refs are external references
+* to see the refs we can RCLICK on the incontext feat and click External refs
+* we add the rod => coincident mate
+* we edit rod => extrude => skech and add rel on rect lines to bas edges (equal)
+* now if i mod a dim in one part others are changes together
+
+### Lecture 42 - Assembly Features
+
+* Assembly features are just like the normal features we are used to. like extruded cut
+* Assembly feats will be applied to the assembly rather than the part
+* Assembly feats are fewer and are mostly subtractive feats that involve removal of material
+* we will use 'lec41-incontext-features-external-refs' assembly as base to drill to oles through multiple parts
+* in Assembly tab we have Assembly Features command drop down with the available feats
+* We select Extruded cut => select top face => sketch => draw circle => extruded cut => through all
+* select a side plane => sketch => draw circle => extrude cut (through all)
+* assy feats in design tree hang under the assembly entitie
+* however parts do not get modified (WTF?
+* the reason to use them is to show design process => seq . parts are manufactured => assembled => then hole is drilled
+
+### Lecture 43 - Collision and Interference Detection
+
+* Those two feats will enable us to find out when 2 parts in an assembly collide or interfere with each other
+* we will use the assembly of lec34 as base
+* we improt the cap
+* soldiworks can detect collisions and interference between moving parts
+* Assembly => Move Component => Collision detection
+* when we choose collision detection we get options:
+	* all comp 
+	* these comp 
+* stop at collision or not . if not we just get a sound and an indication of what collides
+* we can stop at collision. => find the angle and limit movement
+* to do so: exit move => layout => smart dim => select faces . it is 10.8o
+* we fit the cap => evaluate tab => interference detection => 
+* in the selected components we put all the asembly. we calculate and see that the cap does not fit well
+* i can config collision detection
+
+### Lecture 44 - Replacing Parts in Assembly
 
 * 
