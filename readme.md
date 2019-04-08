@@ -972,4 +972,53 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ### Lecture 36 - Path Mate and Linear/Linear Coupler
 
+* Path Mate allows us to make a point in part to follow a specific movement folowing a set path
+* Linear/Linear Coupler ratio allows us to link movements for different parts using a linear relation or ratio
+* we will use the 'lec36-path-mate-linear-coupler' assembly to learn these mates. it has most of the mates defined.
+* we want the ring to follow the wire path. Mate => Adv Mates => Path Mate
+* we need to fill two lists: 
+	* Component Vertex: (a point on the movable part)
+	* Path Curve: Contiguus edge.curve etc as path
+* for our example we want the component vertex to be the center of the ring hole: expand design tree and use the origin of the part
+* we select a path from the seep sketch in wire part (by shoing it in sketch)
+* i apply the mate and it works but i can rotate the ring through the wire
+* path mate has additional options:
+	* path constraint: how far in the path i can move
+	* pitch/yaw control: follow path with one axis fixed
+	* roll control: i can select an up vector and an axis so that the part is bount to an axis related to it
+* i have one cylinder and one seeth moving cocentric but independently to a side slot
+* we want to link them so that the movement of the inner tube is 3 * the movement of the seeth (a ratio)
+* Mate => advanced Mates => Linear Coupler
+* I need to spec:
+	* Entity to Mate
+	* Ref Component for Entity 1
+	* Entityt to Mate 2
+	* Ref component for Entity 2
+	* Ratio
+* as entitty one we select inner tube face ans as entity 2 the outer tube face
+* we dont set ref components as we we will use the reference point of the assembly. 
+* initial position is important for this mate
+
+### Lecture 37 - Let's Practice Advanced Mates Together
+
+* we will add mates on the 'lec37-practice' assembly
+* we work on main cover:
+	* concident rel of bottom edge with main body
+	* width from main body side faces
+* i add and angle restriction to one cover
+* i mirror the cover with its mates. (i get the symmetrical for free)
+* knocker:
+	* coincident face to base
+	* width both sides
+* sliders (use coincident to base and width)
+* bound slider to linear distance
+* linear coupler between 2
+* touch pad: profile center mate
+* ring using path mate (block origin)
+* i have aproblem as path is split into lines. to solve it: Selection Manager => Select Open Loop => click on path in sketch
+
+## Section 6 - Assemblies Deep-Dive
+
+### Lecture 40 - In-Context Features and External References
+
 * 
