@@ -1151,4 +1151,51 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ### Lecture 21 - Model Items (for Parts)
 
+* With model items we will be able to easily and automatically export all the dimensions we added when modeling a part into the drawing
+* we use as base the previous lecture drawing
+* To use it: Annotation tab => Model Items => 
+* we want the dimensions to cover everything in the model: Source => Entire Model => apply. our views are fully annotated
+* The locations of the dimensions might not be ideal. after applying these functions we need to adjust where dimensions are displayed to make our drawing user friendly
+* The dimensions imported are the exact ones inputted when the designer designed the part. This has a very big advantage, because in that way we guarantee to capture the design intent inour drawing.
+* Hidden dimesnions and other options: the design is missing overall heigh and length of the part (because they were not added inthe model or hidden)
+* To confirm it: RCLICK on drawing in design tree => open part => Extrude feat => Sketch. the main dims are purple in color not black. i RIGHTCLICK and see tha the option 'Make dimension to be imported into drawing' is toggled off. u toggle it on. dimension appears in drawing ( i need to reaply model items)
+* If i want to show diensions not marked for drawing without modding the part: in Model Items command meny => in Dimensions apart from marked for drawing select 'Not marked for drawing'
+
+### Lecture 22 - Model Items (for Assemblies)
+
+* * With model items we will be able to easily and automatically export all the dimensions we added when modeling a part into the drawing
+* We will work on the assembly from CSWP lec42 'lec42-assembly-features' to:
+	* find the dimensions ofr all assembly features in the assembly (extruded cuts)
+	* find the dimensions of only the base
+* Assembly feats are usually subtractive feats applied at an assembly level rathern than at part level
+* We go to Annotation => Model Items => Source: only assembly => apply. we get only assembly feat annotatons
+* model items => Source: selected component => click on the base on any of the views. we get the dimensions comfortably arranges in teh available views
+* we change the dims to inches
+
+## Section 4 - Miscellaneous Views
+
+### Lecture 26 - Section Views
+
+* Section views are orthogonal views. However they show a cross-section of the object along a specific cut plane
+* we will create te drawing of 'lec26-Section View_2015' part
+* this part has holes and tunnels in it
+* we are asked to do the drawing of the model
+* we import them odel to get orthogonal views. we start from top view and isometric
+* we select Display style: hidden lines visible for top view
+* to create a Section View we: go to View Layout tab => Section View
+* we get 4 options of cutting lines:
+	* vertical
+	* horizontal
+	* Auxilliary
+	* aligned
+* we choose horizontal for 1st plane (auto start section view enabled) and get section A-A
+* clicking on section view we can rename it
+* our secont section view will be along the tunnel path line (not straight)
+* we select topview and reselect Section view => vertical (disable auto-start section view). we move the line to tunnel and get a popup with options(Arc Offset, Single Offset,Notch offset) to customize the cut plane
+* we select notch offset selecting 3 points accross the tunnel to set the curve, then select single offset for straingth lines. in this way we follow the path to seth the section plane. click apply . then select and flip direction
+* to create  isometric section views: select section view => RCLICK => isometric section view. 
+* in this way we have the section view in an isometric orientation
+
+### Lecture 27 - Break-Out Section Views
+
 * 
