@@ -1231,4 +1231,28 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ### Lecture 29 - Detail Views
 
+* Detail Views allow us to enlarge a part of the drawing view to clearly show small details
+* we will use them to design the views of 'lec29-Detalied View_2015' part
+* we create a drawing with Top view front view and isometric view
+* we add dims for the entire drawing
+* the detail has cramped dimensions so i delete them
+* In View Layout we select 'Detail View'. we are prompted to draw a circle around the area to zoom in
+* it is scaled up. we can change it RCLICK => scale
+* we add dimensions to it
+* if i click on detail view i get options
+* we can also create Detail Views with Isometric, Section, Exploded assembly an/ot other detail views
+
+### Lecture 30 - Alternate Position Views
+
+* we will use 'lec60-practice-assembly' from CSWA course to make a drawing of it with front and isometric view.
+* we are asked to find the angle between the min and max positions of the Post handle utilizing configurations already set for us
+* we ll use alternate position views: View Layout => alternate position view => Select a view (front view)
+* we can use new configuration or existing configurations from the model
+* we create new config and set 2 positions
+* i use Annotations => Smart Dimensions => find the angle
+
+## Section 5 - Bill of Materials (BOM)
+
+### Lecture 43 - Creating a Bill of Materials (BOM)
+
 * 
