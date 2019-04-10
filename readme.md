@@ -1198,4 +1198,37 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ### Lecture 27 - Break-Out Section Views
 
+* In a break-Out section view , we can cut away a portion of the model to expose the inside of it.
+* we will use the part of 'lec27-Break out section view' to create adrawing using this technique
+* we open a drawing file from the model and insert front - top and isometric views
+* we click on main view (front) and set custom scale
+* for breakout: View Layout => Broken-out section => in drawing canvas cursor is now a pen.
+* we need to draw the section of the dawing we want to cut to see inside the part.we workon isometric view
+* the we need to enter the depth  for the break -out section (numeric val or select an entity (edge) to cut up to it)
+* we set 50mm
+* we do the same for front view but we use an edge on the back side
+* to mod a breakout view section: click in design tree on a view to see the broken out section entity in it => RCLICK => Edit definition OR edit sketch
+* i edit sketch editing the line defining. rebuild to apply change
+* for isometric break-out we edit the  definition changing the depth
+
+### Lecture 28 - Break Views
+
+* Break views allow us to view a large part clearly in a smaller sized drawing sheet.
+* we will use part 'lec28-Pipe_2015' to create a drawingout of it.
+* we insert front view and side view
+* in view layout we select Break View => we are asked to select a view. we select front view.
+* we choose a cut direction, line style and the gap size on drawing. then we select where to place the break lines.
+* we apply horizontal break in the same view
+* my break in front view is not propagated to the side view. to do it we can add a break view our selves to this view. our lines are an exact match of the ones in the front view. if it is not we RCLICK on view => Properties => Enable Align Breaks with parent
+* the other way is to make a projected view from the parent view (with the break)
+* to correct allignemtn of a view RCLICK => Alignement => Default Alignement
+* to mod a break we can drag it (chang eits size)
+* To delete a break view 
+	* RCLICK => unbreak view
+	* Seelct break => DELETE
+* dimensions in a a break view reflet the actual model (Annotation=>Model items=> Entire model)
+* Break views are used in orthographic views
+
+### Lecture 29 - Detail Views
+
 * 
