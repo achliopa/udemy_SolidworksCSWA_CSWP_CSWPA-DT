@@ -1253,6 +1253,76 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 
 ## Section 5 - Bill of Materials (BOM)
 
-### Lecture 43 - Creating a Bill of Materials (BOM)
+### Lecture 34 - Creating a Bill of Materials (BOM)
 
-* 
+* A Bill of Materials (BOM) is usually one part of Engineering Drawings. A BOM will include all the materials, parts amd sub-assemblies required to build a specific assembly or a product
+* we have the 'lec34-Creating-a-Bill-of-Materials' turbine cap assembly to make a BM out of it
+* it is masde of 6 parts and one subassembly with 3 parts
+* we open assembly and make a drawign out of it. we add isometric exploded view
+* To add the BOM: Anootations => Tables => BOM => select the view
+* We get  a lot of options to choose. we leave all default and apply.
+* click on top left corner of table to get the options on left
+* BOM Type
+	* Top level only: only top level parts and sub assemblies. not parts of subassemblies
+	* Parts only. top level and in subassemblies
+	* INdented. intendet the parts of subassemblies
+* To show numbers of parts in BOM on the view: Annotate => Auth Balloon => select view
+
+### Lecture 36 - Missing Items from a Bill of Materials (BOM)
+
+* we ll learn:
+	* how to find missing parts from BOM
+	* how to add missing parts fto BOM
+	* how to exclude parts from the BOM
+* we will build on last lectures drawing
+* One way to find missing items in BOM is to look at auto balloon. missing items dont have number but *
+* The other way is to look at design tree. missing items from BOM have indication 'excluded from BOM'
+* I can include them: RCLICK => include to BOM. they are added instantly
+* To exclude an item from BOM. in assembly view => RCLICK => open assembly. => Click on item => RCLICK => Component Properties => enable exclude from bill of materials
+
+### Lecture 36 - Custom Properties in a Bill of Materials 
+
+* We ll add additional info to BOM
+* we ll change title add columns
+* to change title douvble click to edit text
+* to add column: select column => RCLICK => Add column => select type (CUSTOM PROPS => PartNo)
+* Do the same for cost column
+* custom properties as well as other info like the description come from the individual parts. it is added by the creator of part. 
+* to change a column => RCLICK => Column Property
+
+### Lecture 37 - Items Numbers and Sorting with Bill of Materials
+
+* we use previous lecture drawing
+* we higlight the column we want to sort => RCLICK => Sort => Select colun to sort by. 
+* we can choose if we want to affect item numbers
+* in BOMN props we can select the starting num
+
+### Lecture 38 - Adding Equations to a Bill of Materials
+
+* Equations will allow us to do simple calculations and use simple functions. we can think of it asa very simple excel sheet
+* We build of previous lecture drawing
+* we want total cost for all parts (num of parts * unit price)
+* we want totalsum price
+* find the most expensive item
+* we add a column => highlight column => Σ => 'Cost' * 'QTY.'
+* we add anew row => Insert => Row below
+* again with  Σ selectung SUM() and highlights the vals i get the sum like excel
+* i add a row and use MAX to find the most expensive item
+
+### Lecture 39 - Configuration Groupings in a Bill of Materials
+
+* with configs a designer is a ble to create different versions of a part or an assembly without having to create more than one SW file
+* we will create a drawing for 'lec39-Configuration-Grouping'
+* the part has 2 configs and the assembly has 2 configs
+* we open assembly and make a new drawing of it
+* we add isometric view in 2 times one for each config. 
+* we select one of them in props we select reference cofiguration (config 2)
+* we add a bom for each view (2 different BOMS)
+* in cofig 2 we have same part 2 tmes because they are different cofigurations of same part
+* in bom props Part config grouping we can select how to present them
+* to put them both in one table (in bom props i click on both cofiguratiosn)
+
+
+## Section 6 - Additional Drawing Competencies
+
+### Lecture 43 - View Focus with Drawing Views
