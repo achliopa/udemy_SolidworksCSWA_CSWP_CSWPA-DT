@@ -1326,3 +1326,54 @@ our extrusion is in contact with 2 bodies (plug and base) we want to merge it on
 ## Section 6 - Additional Drawing Competencies
 
 ### Lecture 43 - View Focus with Drawing Views
+
+* view focus is the special area around each drawing view that contains all additional annotation and/or sketches that are not part of the Drawing view
+* we make a drawing of 'lec43-View Focus' with front right and isometric view
+* we are asked to vind an angle with a horiontal line that is not in the viwe
+* also an angle between views
+* I cannot use smart dimension for arbitrary edges across view focuses
+* in the view focus i can sketch  e.g centerline to help me find the angle
+* to do he cross view angle i extencd view focus of first to include second and add a centerline. 
+* doubleclick on view focus and sketch outside of it
+
+### Lecture 44 - Shown and Hidden Components in an Assembly Drawing
+
+* we use the 'lec44-Hide-Show-Comp' which has hidded compo to do a drawing.
+Hidded parts do not show in viiews
+* to hide the cover part from front view: if i know which part to hide : select it in the view => RCLICK =>  SHow/Hide component
+* if i dont knwo i lookit in design tree => RCLICK => Show hide
+* to show hidden  components i select them in design tree RCLICK show/hide them but i cannot. they are hidden i the model
+* click in view => open assembly => unhide them
+
+### Lecture 45 -  Linked Notes
+
+* using linked notes, we can link displayed notes to a previously defined custom property or to a website
+* we open the turbine cap assembly (lec34) and make a drawing out of it (isometric exploded)
+* we are asked to make a note with the nameof designer and linked it to the drawing
+* Annotations => Note => leave it on the part to name
+* we get a text box and an arrow. we see the linked options (hyperlink)
+* i can also link property
+
+### Lecture 46 - Measure Tool to Evaluate Measurements in the Drawing Environment
+
+* a Measurement tool is avaialble to measure say the area of a surface
+* Evaluate tab =>  Measure 
+* without selecting any option if i click ona surface iget perimenter and surface
+* In measurement
+	* i can change measurement units
+
+## Section 7 - Additional Stuff
+
+### Lecture 49 - Official CSWPA-DT Sample Test
+
+* Before taking SOLIDWORKS Certification Test: Check out [SOLIDWORKS page for the CSWPA-DT certification](https://www.solidworks.com/sw/support/29479_ENU_HTML.htm). There, you can read more about structure of the CSWPA-DT exam. 
+* Also, don't forget to take the sample test provided by SOLIDWORKS. you can find it in the link above. We are also attaching it to this lecture.
+
+### Lecture 50 - Tips when talking the CSWPA-DT Exam 
+
+* In the case you are planning to take the Certified SOLIDWORKS Professional Advanced Drawing Tools test (CSWPA-DT), here are few tips: 
+	* Make sure to save the your work separately at the end of each question. 
+	* Having two screen or a bigger screen would be helpful so you can see the question and work on SOLIDWORKS for answers at the same time. 
+	* In multiple choice questions, usually if your answer is off the given ones, it means you did something wrong along the way. This makes the first tip important too. 
+* The CSWPA-DT exam is not easy. It will require you to pull out many different information using SOLIDWORKS Drawing Tools. It will also require you to work fast. Even though this course teaches just about all the skills needed for the exam, speed and fluency are two aspects beyond skills that take time to acquire. 
+* So, take some time to digest what you learned in this course, find lots of objects around and model for practice, or look for side freelancing projects on the side, more practice will greatly increase your chance to Pass the test. 
